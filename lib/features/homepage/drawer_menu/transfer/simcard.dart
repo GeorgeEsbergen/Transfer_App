@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:money_transfer/features/homepage/homepage.dart';
-
+import 'package:money_transfer/features/homepage/drawer_menu/transfer/success.dart';
 import '../../../../core/widgets/buttons.dart';
 import '../../../../core/widgets/currentbalance.dart';
 import '../../../../core/widgets/rowas.dart';
@@ -40,8 +39,7 @@ class SimCard extends StatelessWidget {
                 child: SmallBlueButton(
                     buttonName: "Send",
                     fn: () {
-                      Navigator.popAndPushNamed(
-                          context, HomePageScreen.routeName);
+                      Navigator.pushNamed(context, SuccessScreen.routeName);
                     }))
           ],
         ),

@@ -22,7 +22,8 @@ class DescriptionOnBoarding extends StatelessWidget {
     super.key,
     required this.text,
     this.size,
-    this.textAlign, this.fontWeight,
+    this.textAlign,
+    this.fontWeight,
   });
   final String text;
   final double? size;
@@ -37,20 +38,21 @@ class DescriptionOnBoarding extends StatelessWidget {
       style: TextStyle(
           color: Colors.grey,
           fontSize: size ?? 13,
-          fontWeight:fontWeight?? FontWeight.w600),
+          fontWeight: fontWeight ?? FontWeight.w600),
     );
   }
 }
-
 
 class BlueText extends StatelessWidget {
   const BlueText({
     super.key,
     required this.text,
     this.size,
+    this.fontWeight,
   });
   final String text;
   final double? size;
+  final FontWeight? fontWeight;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +61,7 @@ class BlueText extends StatelessWidget {
       style: TextStyle(
           color: MainAssets.blue,
           fontSize: size ?? 35,
-          fontWeight: FontWeight.w600),
+          fontWeight: fontWeight ?? FontWeight.w600),
     );
   }
 }

@@ -4,6 +4,8 @@ import 'package:money_transfer/core/util/constant.dart';
 import 'package:money_transfer/core/widgets/buttons.dart';
 import 'package:money_transfer/core/widgets/texts.dart';
 import 'package:money_transfer/features/auth/login/loginpage.dart';
+import 'package:money_transfer/features/carddetails/carddetails.dart';
+import 'package:money_transfer/features/homepage/drawer_menu/profile/profile_screen.dart';
 import 'package:money_transfer/features/homepage/drawer_menu/transfer/transferpag/transferscreen.dart';
 
 import 'mywallet/mywalletscreen.dart';
@@ -42,7 +44,9 @@ class Drawermenu extends StatelessWidget {
             RowOfMenuProfile(
               icon: Icons.person_4_outlined,
               text: "Profile",
-              fun: () {},
+              fun: () {
+                Navigator.pushNamed(context, ProfileScreen.routeName);
+              },
             ),
             RowOfMenuProfile(
               icon: Icons.stacked_bar_chart,
@@ -54,8 +58,13 @@ class Drawermenu extends StatelessWidget {
               text: "Transfer",
               fun: () {
                 Navigator.pushNamed(context, TransferScreen.routeName);
-
-                
+              },
+            ),
+            RowOfMenuProfile(
+              icon: Icons.credit_card_sharp,
+              text: "Cards",
+              fun: () {
+                Navigator.pushNamed(context, CardDetails.routeName);
               },
             ),
             RowOfMenuProfile(

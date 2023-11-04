@@ -16,8 +16,8 @@ class _CardDetailsHomeState extends State<CardDetailsHome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 40, right: 20, left: 20),
-      child: Column(
+      padding: const EdgeInsets.only(top: 0, right: 20, left: 20),
+      child: ListView(
         children: [
           const MaianAppBar(text: 'Card Details'),
           const SizedBox(height: 45),
@@ -55,6 +55,8 @@ class _CardDetailsHomeState extends State<CardDetailsHome> {
           const SizedBox(height: 25),
           Expanded(
               child: ListView.separated(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
                   itemBuilder: (context, i) => const CashbackItems(
                         money: "\$342",
                         time: "4:30 PM",
