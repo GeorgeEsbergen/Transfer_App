@@ -87,16 +87,19 @@ class LoginScreenHome extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  radius: 20,
+                  backgroundColor: Colors.white,
+                  radius: 25,
                   foregroundImage: AssetImage(
                     "assets/images/icons/google.png",
                   ),
                 ),
+                SizedBox(width: 50),
                 CircleAvatar(
-                  radius: 30,
+                  radius: 25,
+                  backgroundColor: Colors.white,
                   foregroundImage: AssetImage(
                     "assets/images/icons/Facebook.png",
                   ),

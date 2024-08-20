@@ -13,6 +13,7 @@ import 'features/homepage/drawer_menu/transfer/simcard.dart';
 import 'features/homepage/drawer_menu/transfer/success.dart';
 import 'features/homepage/drawer_menu/transfer/transferpag/transferscreen.dart';
 import 'features/homepage/homepage.dart';
+import 'features/onboarding/onboardingone.dart';
 import 'features/start_screen/dots.dart';
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
       
       
       routes: {
-        '/':(context) => const HomePageScreen(),// OnBoardingOne(),
+        '/':(context) =>  const OnBoardingOne(),
         PageViewDemo.routeName:(context) =>const PageViewDemo(),
         LoginScreen.routeName:(context) => const LoginScreen(),
         SignUpScreen.routeName:(context) => const SignUpScreen(),
